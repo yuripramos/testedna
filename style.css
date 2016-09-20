@@ -1,19 +1,57 @@
 body{
 	font-family: 'Raleway', sans-serif;
 }
-
+/*::::::::::::::::::::Box style::::::::::::::::::::*/ 
 .box-produto{
 	border:solid 1px #000;
 	text-align: center;
-
+	padding: 30px;
+	margin-bottom:30px;
+	height: 700px;
 }
 
 .box-produto h2{
 	font-family: 'Oswald', sans-serif;
+	color: #1e73be;
 }
-
+.box-produto h3{
+	font-size: 20px;
+}
 .box-produto hr{
-	color: #358fe7;
 	width: 80%;
+    border: none;
+    height: 1.4px;
+    background: rgba(53,143,231,0.9);
+}
+.coleta{
+	width: 100%;
+	
 }
 
+.coleta .title{
+	text-align: center;
+    height: 30px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: capitalize;
+    margin: 10px 0 10px 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.comprar{
+	margin-top: 15px;
+	padding: 10px;
+	width: 250px;
+	text-align: center;
+	height: 55px;
+	vertical-align: middle;
+	border-radius: 7px;
+	font-size: 22px;
+	background: rgba(102, 252, 25, 0.8);
+	border:none;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-family: 'Oswald', sans-serif;
+}
