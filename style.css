@@ -1,0 +1,19 @@
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+.box-produto{
+	border:solid 1px #000;
+	text-align: center;
+
+}
+
+.box-produto h2{
+	font-family: 'Oswald', sans-serif;
+}
+
+.box-produto hr{
+	color: #358fe7;
+	width: 80%;
+}
+
