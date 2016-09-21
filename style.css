@@ -1,13 +1,17 @@
+@charset "UTF-8";
+
 body{
 	font-family: 'Raleway', sans-serif;
 }
 /*::::::::::::::::::::Box style::::::::::::::::::::*/ 
 .box-produto{
-	border:solid 1px #000;
+	border-radius: 3px;
+	border:solid 1px rgba(0, 0, 0, 0.1);
 	text-align: center;
-	padding: 30px;
+	padding: 15px;
 	margin-bottom:30px;
 	height: 700px;
+	background: rgba(200,200,200,0.4);
 }
 
 .box-produto h2{
@@ -15,7 +19,7 @@ body{
 	color: #1e73be;
 }
 .box-produto h3{
-	font-size: 20px;
+	font-size: 17px;
 }
 .box-produto hr{
 	width: 80%;
@@ -40,6 +44,28 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
+.coleta .text span{
+	font-weight: bold;
+}
+
+.coleta .preco{
+	color: #1e73be;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 15px 0px;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+}
+
+.coleta .preco .tracejado{
+	text-decoration:line-through;	
+}
+
+.coleta .valor{
+	font-size: 25px;
+}
 .comprar{
 	margin-top: 15px;
 	padding: 10px;
@@ -49,9 +75,41 @@ body{
 	vertical-align: middle;
 	border-radius: 7px;
 	font-size: 22px;
-	background: rgba(102, 252, 25, 0.8);
+	background: #f45636;
 	border:none;
 	text-transform: uppercase;
 	font-weight: 500;
 	font-family: 'Oswald', sans-serif;
+	color: #FFF;
+	transition: all 0.5s;
+}
+
+.comprar span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.comprar span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.comprar:hover span {
+  padding-right: 25px;
+}
+
+.comprar:hover span:after {
+  opacity: 1;
+  right: 0;
+
+}
+
+.comprar:hover{
+	background: rgba(53,143,231,0.9);
 }
