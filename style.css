@@ -3,6 +3,16 @@
 body{
 	font-family: 'Raleway', sans-serif;
 }
+.container > h1, .container > h2{
+	font-family: 'Oswald', sans-serif;
+	color: #1e73be;
+	text-align:center;
+	padding:5px;
+}
+
+.container > h2{
+	padding: 30px;
+}
 /*::::::::::::::::::::Box style::::::::::::::::::::*/ 
 .box-produto{
 	border-radius: 3px;
@@ -112,4 +122,35 @@ body{
 
 .comprar:hover{
 	background: rgba(53,143,231,0.9);
+}
+/*::::::::::::::::::::Box Personalizado::::::::::::::::::::*/ 
+
+.personalizado img{
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+.input-personalizado{
+	width: 300px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+.input-personalizado h5{
+	padding-bottom: 10px;
+}
+
+.input-personalizado .n-pais, .input-personalizado .n-filhos{
+	width: 60px;
+	border-radius:5px;
+	border: 1px solid rgba(53,143,231,0.4);
+	height: 40px;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	font-size:18px;
+	color: rgba(53,143,231,0.9);
+
+}
+
+.input-personalizado .n-pais{
+	margin-right: 100px;
 }
