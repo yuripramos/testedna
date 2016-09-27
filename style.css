@@ -69,11 +69,11 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.coleta .preco .tracejado{
+.coleta .preco #tracejado{
 	text-decoration:line-through;	
 }
 
-.coleta .valor{
+.coleta #valor{
 	font-size: 25px;
 }
 .comprar{
@@ -139,7 +139,7 @@ body{
 	padding-bottom: 10px;
 }
 
-.input-personalizado .n-pais, .input-personalizado .n-filhos{
+.input-personalizado #n-pais, .input-personalizado #n-filhos{
 	width: 60px;
 	border-radius:5px;
 	border: 1px solid rgba(53,143,231,0.4);
@@ -151,6 +151,6 @@ body{
 
 }
 
-.input-personalizado .n-pais{
+.input-personalizado #n-pais{
 	margin-right: 100px;
 }
