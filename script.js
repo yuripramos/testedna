@@ -11,7 +11,7 @@ $(document).ready(function(){
 		valorNovo = (250 * (tamKit - 2) + 447).toFixed(2);
 		valorNovoFixado = (250 * (tamKit - 2) + 599).toFixed(2);
 		$("#valor").html(valorNovo);
-		$("#tracejado").html(valorNovoFixado);
+		$("#tsd").html(valorNovoFixado);
 
 	
 	});
@@ -26,7 +26,8 @@ $(document).ready(function(){
 		valorNovo = (250 * (tamKit - 2) + 447).toFixed(2);
 		valorNovoFixado = (250 * (tamKit - 2) + 599).toFixed(2);
 		$("#valor").html(valorNovo);
-		$("#tracejado").html(valorNovoFixado);
+		$("#tsd").html(valorNovoFixado);
+
 	});
 
 });

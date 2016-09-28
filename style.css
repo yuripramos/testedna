@@ -69,7 +69,7 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.coleta .preco #tracejado{
+.coleta .preco .tracejado{
 	text-decoration:line-through;	
 }
 
