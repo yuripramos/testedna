@@ -22,17 +22,36 @@ $(document).ready(function(){
 		        this.value = "";
 		        return;
 		    }
-		    if(tamPai.value > 3){
+		    if( tamPai.value > 3 ){
 				tamPai.value = 1;
 			}
 			if(tamPai.value > 1){
 				tamFilho.value = 1;		
 			}
 			tamKit = (parseInt(tamPai.value, 10) + parseInt(tamFilho.value, 10) );
+
 			$(".n-personalizado").html(tamKit);	
-		});
-		 
 		
+            if(tamPai.value == 1 && tamFilho.value == 1){
+                 $('.personalizado img').fadeOut(1000, function() {
+                    $('.personalizado img').attr("src","http://dev.testedna.com.br/wp-content/uploads/2016/09/Teste-DNA-de-Paternidade-Duo.png");
+                    $('.personalizado img').fadeIn(1500);
+                });
+            }
+            if(tamPai.value == 2 && tamFilho.value == 1){
+                 $('.personalizado img').fadeOut(1000, function() {
+                    $('.personalizado img').attr("src","http://dev.testedna.com.br/wp-content/uploads/2016/09/Teste-DNA-de-Paternidade-Duo-P2.png");
+                    $('.personalizado img').fadeIn(1500);
+                });
+            }
+            if(tamPai.value == 3 && tamFilho.value == 1){
+                 $('.personalizado img').fadeOut(1000, function() {
+                    $('.personalizado img').attr("src","http://dev.testedna.com.br/wp-content/uploads/2016/09/Teste-DNA-de-Paternidade-Duo-P3.png");
+                    $('.personalizado img').fadeIn(1500);
+                });
+            }
+
+        });	 
 	});
 	$("#n-filhos").bind('keyup mouseup', function (){
 		var tamFilho = document.getElementById("n-filhos");
@@ -63,7 +82,27 @@ $(document).ready(function(){
 				tamPai.value = Math.max(1,1);
 			}
 			tamKit = (parseInt(tamPai.value, 10) + parseInt(tamFilho.value, 10) );
-			$(".n-personalizado").html(tamKit);		
+			
+            $(".n-personalizado").html(tamKit);	
+
+            if(tamPai.value == 1 && tamFilho.value == 1){
+                 $('.personalizado img').fadeOut(1000, function() {
+                    $('.personalizado img').attr("src","http://dev.testedna.com.br/wp-content/uploads/2016/09/Teste-DNA-de-Paternidade-Duo.png");
+                    $('.personalizado img').fadeIn(1500);
+                });
+            }
+            if(tamPai.value == 1 && tamFilho.value == 2){
+                 $('.personalizado img').fadeOut(1000, function() {
+                    $('.personalizado img').attr("src","http://dev.testedna.com.br/wp-content/uploads/2016/09/Teste-DNA-de-Paternidade-Duo-F2.png");
+                    $('.personalizado img').fadeIn(1500);
+                });
+            }
+            if(tamPai.value == 1 && tamFilho.value == 3){
+                 $('.personalizado img').fadeOut(1000, function() {
+                    $('.personalizado img').attr("src","http://dev.testedna.com.br/wp-content/uploads/2016/09/Teste-DNA-de-Paternidade-Duo-F3.png");
+                    $('.personalizado img').fadeIn(1500);
+                });
+            }	
 		});
 	});
 
