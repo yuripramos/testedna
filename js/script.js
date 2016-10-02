@@ -30,8 +30,11 @@ $(document).ready(function(){
 			}
 			tamKit = (parseInt(tamPai.value, 10) + parseInt(tamFilho.value, 10) );
 
-			$(".n-personalizado").html(tamKit);	
-		
+	
+            var valorNovoFixado = parseInt(document.getElementById("tracejado").value, 10);
+            var valorNovo = parseInt(document.getElementById("valor").value, 10);	
+            $(".n-personalizado").html(tamKit);
+		    console.log("o tamanho do kit é " + tamKit);
             if(tamPai.value == 1 && tamFilho.value == 1){
                  $('.personalizado img').fadeOut(1000, function() {
                     $('.personalizado img').attr("src","http://dev.testedna.com.br/wp-content/uploads/2016/09/Teste-DNA-de-Paternidade-Duo.png");
@@ -50,7 +53,11 @@ $(document).ready(function(){
                     $('.personalizado img').fadeIn(1500);
                 });
             }
-
+            valorNovo = (250 * (tamKit - 2) + 447).toFixed(2);
+            valorNovoFixado = (250 * (tamKit - 2) + 599).toFixed(2);
+            $("#valor").html(valorNovo);
+            $("#tsd").html(valorNovoFixado); 
+            $(".n-personalizado").html(tamKit);
         });	 
 	});
 	$("#n-filhos").bind('keyup mouseup', function (){
@@ -82,8 +89,7 @@ $(document).ready(function(){
 				tamPai.value = Math.max(1,1);
 			}
 			tamKit = (parseInt(tamPai.value, 10) + parseInt(tamFilho.value, 10) );
-			
-            $(".n-personalizado").html(tamKit);	
+
 
             if(tamPai.value == 1 && tamFilho.value == 1){
                  $('.personalizado img').fadeOut(1000, function() {
@@ -103,6 +109,11 @@ $(document).ready(function(){
                     $('.personalizado img').fadeIn(1500);
                 });
             }	
+            valorNovo = (250 * (tamKit - 2) + 447).toFixed(2);
+            valorNovoFixado = (250 * (tamKit - 2) + 599).toFixed(2);
+            $("#valor").html(valorNovo);
+            $("#tsd").html(valorNovoFixado); 
+            $(".n-personalizado").html(tamKit);
 		});
 	});
 
