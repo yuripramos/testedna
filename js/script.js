@@ -263,103 +263,103 @@ $(document).ready(function(){
         });
     });
 });
-jQuery(document).ready(function() {
-    jQuery("#edit-submitted-acquisition-amount-1,#edit-submitted-acquisition-amount-2,#edit-submitted-cultivation-amount-1,#edit-submitted-cultivation-amount-2,#edit-submitted-cultivation-amount-3,#edit-submitted-cultivation-amount-4,#edit-submitted-retention-amount-1,#edit-submitted-retention-amount-2,#edit-submitted-constituent-base-total-constituents").keyup(function() {
-        calcTotal();
-    });
-});
+// jQuery(document).ready(function() {
+//     jQuery("#edit-submitted-acquisition-amount-1,#edit-submitted-acquisition-amount-2,#edit-submitted-cultivation-amount-1,#edit-submitted-cultivation-amount-2,#edit-submitted-cultivation-amount-3,#edit-submitted-cultivation-amount-4,#edit-submitted-retention-amount-1,#edit-submitted-retention-amount-2,#edit-submitted-constituent-base-total-constituents").keyup(function() {
+//         calcTotal();
+//     });
+// });
 
-function calcTotal() {
-    var grade = 0;
-    var donorTotal = Number(jQuery("#edit-submitted-constituent-base-total-constituents").val().replace(/,/g, ""));
-    if (donorTotal) {
-        donorTotal = parseFloat(donorTotal);
-    } else {
-        donorTotal = 0;
-    }
-    grade += getBonusDonorPoints(donorTotal);
-    var acqAmount1 = Number(jQuery("#edit-submitted-acquisition-amount-1").val().replace(/,/g, ""));
-    var acqAmount2 = Number(jQuery("#edit-submitted-acquisition-amount-2").val().replace(/,/g, ""));
-    var acqTotal = 0;
-    if (acqAmount1) {
-        acqAmount1 = parseFloat(acqAmount1);
-    } else {
-        acqAmount1 = 0;
-    }
-    if (acqAmount2) {
-        acqAmount2 = parseFloat(acqAmount2);
-    } else {
-        acqAmount2 = 0;
-    }
-    if (acqAmount1 > 0 && acqAmount2 > 0) {
-        acqTotal = ((acqAmount2 - acqAmount1) / acqAmount1 * 100).toFixed(2);
-    } else {
-        acqTotal = 0;
-    }
-    jQuery("#edit-submitted-acquisition-percent-change").val(acqTotal + '%');
-    grade += getAcquisitionPoints(acqTotal);
-    console.log(grade);
-    var cultAmount1 = Number(jQuery("#edit-submitted-cultivation-amount-1").val().replace(/,/g, ""));
-    var cultAmount2 = Number(jQuery("#edit-submitted-cultivation-amount-2").val().replace(/,/g, ""));
-    var cultTotal = 0;
-    if (cultAmount1) {
-        cultAmount1 = parseFloat(cultAmount1);
-    } else {
-        cultAmount1 = 0;
-    }
-    if (cultAmount2) {
-        cultAmount2 = parseFloat(cultAmount2);
-    } else {
-        cultAmount2 = 0;
-    }
-    if (cultAmount1 > 0 && cultAmount2 > 0) {
-        cultTotal = ((cultAmount2 - cultAmount1) / cultAmount1 * 100).toFixed(2);
-    } else {
-        cultTotal = 0;
-    }
-    jQuery("#edit-submitted-cultivation-percent-change1").val(cultTotal + '%');
-    grade += getAcquisitionPoints(cultTotal);
-    var cultAmount3 = Number(jQuery("#edit-submitted-cultivation-amount-3").val().replace(/,/g, ""));
-    var cultAmount4 = Number(jQuery("#edit-submitted-cultivation-amount-4").val().replace(/,/g, ""));
-    if (cultAmount3) {
-        cultAmount3 = parseFloat(cultAmount3);
-    } else {
-        cultAmount3 = 0;
-    }
-    if (cultAmount4) {
-        cultAmount4 = parseFloat(cultAmount4);
-    } else {
-        cultAmount4 = 0;
-    }
-    if (cultAmount3 > 0 && cultAmount4 > 0) {
-        cultTotal2 = ((cultAmount4 - cultAmount3) / cultAmount3 * 100).toFixed(2);
-    } else {
-        cultTotal2 = 0;
-    }
-    jQuery("#edit-submitted-cultivation-percent-change2").val(cultTotal2 + '%');
-    grade += getAcquisitionPoints(cultTotal2);
-    var retAmount1 = Number(jQuery("#edit-submitted-retention-amount-1").val().replace(/,/g, ""));
-    var retAmount2 = Number(jQuery("#edit-submitted-retention-amount-2").val().replace(/,/g, ""));
-    var retTotal = 0;
-    if (retAmount1) {
-        retAmount1 = parseFloat(retAmount1);
-    } else {
-        retAmount1 = 0;
-    }
-    if (retAmount2) {
-        retAmount2 = parseFloat(retAmount2);
-    } else {
-        retAmount2 = 0;
-    }
-    if (retAmount1 > 0 && retAmount2 > 0) {
-        retTotal = (retAmount2 / retAmount1 * 100).toFixed(2);
-    } else {
-        retTotal = 0;
-    }
-    jQuery("#edit-submitted-retention-percent-change").val(retTotal + '%');
-    grade += getAcquisitionPoints(retTotal);
-    jQuery("#edit-submitted-final-grade-grade").val(grade + ' / 400');
-}
+// function calcTotal() {
+//     var grade = 0;
+//     var donorTotal = Number(jQuery("#edit-submitted-constituent-base-total-constituents").val().replace(/,/g, ""));
+//     if (donorTotal) {
+//         donorTotal = parseFloat(donorTotal);
+//     } else {
+//         donorTotal = 0;
+//     }
+//     grade += getBonusDonorPoints(donorTotal);
+//     var acqAmount1 = Number(jQuery("#edit-submitted-acquisition-amount-1").val().replace(/,/g, ""));
+//     var acqAmount2 = Number(jQuery("#edit-submitted-acquisition-amount-2").val().replace(/,/g, ""));
+//     var acqTotal = 0;
+//     if (acqAmount1) {
+//         acqAmount1 = parseFloat(acqAmount1);
+//     } else {
+//         acqAmount1 = 0;
+//     }
+//     if (acqAmount2) {
+//         acqAmount2 = parseFloat(acqAmount2);
+//     } else {
+//         acqAmount2 = 0;
+//     }
+//     if (acqAmount1 > 0 && acqAmount2 > 0) {
+//         acqTotal = ((acqAmount2 - acqAmount1) / acqAmount1 * 100).toFixed(2);
+//     } else {
+//         acqTotal = 0;
+//     }
+//     jQuery("#edit-submitted-acquisition-percent-change").val(acqTotal + '%');
+//     grade += getAcquisitionPoints(acqTotal);
+//     console.log(grade);
+//     var cultAmount1 = Number(jQuery("#edit-submitted-cultivation-amount-1").val().replace(/,/g, ""));
+//     var cultAmount2 = Number(jQuery("#edit-submitted-cultivation-amount-2").val().replace(/,/g, ""));
+//     var cultTotal = 0;
+//     if (cultAmount1) {
+//         cultAmount1 = parseFloat(cultAmount1);
+//     } else {
+//         cultAmount1 = 0;
+//     }
+//     if (cultAmount2) {
+//         cultAmount2 = parseFloat(cultAmount2);
+//     } else {
+//         cultAmount2 = 0;
+//     }
+//     if (cultAmount1 > 0 && cultAmount2 > 0) {
+//         cultTotal = ((cultAmount2 - cultAmount1) / cultAmount1 * 100).toFixed(2);
+//     } else {
+//         cultTotal = 0;
+//     }
+//     jQuery("#edit-submitted-cultivation-percent-change1").val(cultTotal + '%');
+//     grade += getAcquisitionPoints(cultTotal);
+//     var cultAmount3 = Number(jQuery("#edit-submitted-cultivation-amount-3").val().replace(/,/g, ""));
+//     var cultAmount4 = Number(jQuery("#edit-submitted-cultivation-amount-4").val().replace(/,/g, ""));
+//     if (cultAmount3) {
+//         cultAmount3 = parseFloat(cultAmount3);
+//     } else {
+//         cultAmount3 = 0;
+//     }
+//     if (cultAmount4) {
+//         cultAmount4 = parseFloat(cultAmount4);
+//     } else {
+//         cultAmount4 = 0;
+//     }
+//     if (cultAmount3 > 0 && cultAmount4 > 0) {
+//         cultTotal2 = ((cultAmount4 - cultAmount3) / cultAmount3 * 100).toFixed(2);
+//     } else {
+//         cultTotal2 = 0;
+//     }
+//     jQuery("#edit-submitted-cultivation-percent-change2").val(cultTotal2 + '%');
+//     grade += getAcquisitionPoints(cultTotal2);
+//     var retAmount1 = Number(jQuery("#edit-submitted-retention-amount-1").val().replace(/,/g, ""));
+//     var retAmount2 = Number(jQuery("#edit-submitted-retention-amount-2").val().replace(/,/g, ""));
+//     var retTotal = 0;
+//     if (retAmount1) {
+//         retAmount1 = parseFloat(retAmount1);
+//     } else {
+//         retAmount1 = 0;
+//     }
+//     if (retAmount2) {
+//         retAmount2 = parseFloat(retAmount2);
+//     } else {
+//         retAmount2 = 0;
+//     }
+//     if (retAmount1 > 0 && retAmount2 > 0) {
+//         retTotal = (retAmount2 / retAmount1 * 100).toFixed(2);
+//     } else {
+//         retTotal = 0;
+//     }
+//     jQuery("#edit-submitted-retention-percent-change").val(retTotal + '%');
+//     grade += getAcquisitionPoints(retTotal);
+//     jQuery("#edit-submitted-final-grade-grade").val(grade + ' / 400');
+// }
 
 function getAcquisitionPoints(val) {
     if (val < 1) {

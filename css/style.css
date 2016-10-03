@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body{
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Oswald', sans-serif;
 }
 .container > h1, .container > h2{
 	font-family: 'Oswald', sans-serif;
@@ -185,7 +185,7 @@ body{
   border-radius: 3px;
   box-shadow: 0 17px 41px -21px rgb(0, 0, 0);
   padding: 20px 30px;
-  border-top: 9px solid #7B1FA2;
+  border-top: 9px solid #1e73be;
   box-sizing: border-box;
   width: 80%;
   margin: 0 10%;
@@ -237,7 +237,7 @@ body{
 
 .steps input:focus, .steps textarea:focus{
   color: #333333;
-  border: 1px solid #7B1FA2;
+
 }
 
 .error1{
@@ -254,7 +254,7 @@ body{
   height: 39px;
   display: block;
   color: #ffffff;
-  background: #e62163;
+  background: #f45636;
   border: 0;
   font: 14px ;
   line-height: 39px;
@@ -291,7 +291,7 @@ body{
 /*buttons*/
 .steps .action-button, .action-button {
   width: 100px !important;
-  background: #7B1FA2;
+  background: #1e73be;
   font-weight: bold;
   color: white;
   border: 0 none;
@@ -316,7 +316,7 @@ body{
 }
 
 .steps .action-button:hover, .steps .action-button:focus, .action-button:hover, .action-button:focus {
-  background:#9F2AD0;;
+  background: #f45636;
 }
 
 .steps .explanation{
@@ -344,7 +344,7 @@ display: block;
   text-transform: uppercase;
      margin: 0 0 5px;
      line-height: 1;
-     color: #7B1FA2;
+     color: #1e73be;
      font-size: 18px;
     font-weight: 400;
     text-align:center;
@@ -404,7 +404,7 @@ display: block;
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-  background: #7B1FA2;
+  background: #1e73be;
   color: white;
 }
 
@@ -609,7 +609,7 @@ display: block;
 
 /* Info */
 .info {
-  width: 300px;
+  width: 500px;
   margin: 35px auto;
   text-align: center;
 
