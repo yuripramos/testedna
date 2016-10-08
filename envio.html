@@ -99,22 +99,167 @@
           <p> O que deseja enviar para esse endereço? </p>         
           <div class="kit kit01" data="1"><i class="fa fa-circle-o"></i>Kit 01: Suposta Mãe</div>
           <div class="kit kit02 ativo" data="2"><i class="fa fa-check-circle"></i>Kit 02: Suposto Filho</div>
+          <div class="kit kit02 ativo" data="2"><i class="fa fa-check-circle"></i>Kit 03: Suposto Pai</div>
         </div>
             <div class="form-item " id="">
             
-              <label for="edit-submitted-acquisition-amount-1 total_number_of_donors_in_year_1-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">What was your number of total donors in year 1? *</label>
+              <label for="remetente1">Remetente</label>
 
-              <input id="edit-submitted-acquisition-amount-1" class="form-text hs-input" name="total_number_of_donors_in_year_1" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
+              <input id="remetente1" class="form-text hs-input" name="remetente1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
               <span class="error1" style="display: none;">
                   <i class="error-log fa fa-exclamation-triangle"></i>
               </span>
             </div>
 
-            <div class="form-item webform-component webform-component-textfield hs_total_number_of_donors_in_year_2 field hs-form-field" id="webform-component-acquisition--amount-2">
+            <div class="form-item" id="">
             
-              <label for="edit-submitted-acquisition-amount-2 total_number_of_donors_in_year_2-99a6d115-5e68-4355-a7d0-529207feb0b3_6344">What was your number of total donors in year 2? *</label>
+              <label for="cep1">CEP</label>
 
-              <input id="edit-submitted-acquisition-amount-2" class="form-text hs-input" name="total_number_of_donors_in_year_2" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
+              <input id="cep1" class="form-text hs-input" name="cep1" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="rua1">Rua/Av.:</label>
+
+              <input id="rua1" class="form-text hs-input" name="rua1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="numero-complemento1">Número e complemento</label>
+
+              <input id="numero-complemento1" class="form-text hs-input" name="numero-complemento1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="bairro1">Bairro</label>
+
+              <input id="bairro1" class="form-text hs-input" name="bairro1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="cidade1">Cidade</label>
+
+              <input id="cidade1" class="form-text hs-input" name="cidade1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="UF1">UF</label>
+
+              <input id="UF1" class="form-text hs-input" name="UF1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Unidade Federativa">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="telefone1">Telefone</label>
+
+              <input id="telefone1" class="form-text hs-input" name="telefone1" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um telefone">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+
+
+        <input type="button" data-page="1" name="previous" class="previous action-button" value="Anterior" />
+        <input type="button" data-page="3" name="next" class="next action-button next-2" value="Proximo" />
+
+      </fieldset>
+      <fieldset id="endereco2">
+        <h2 class="fs-title">Endereço</h2>
+        <h3 class="fs-subtitle"><i class="fa fa-info-circle font-big" aria-hidden="true"></i>Você pode optar por receber os kits de coletas em endereços diferentes</h3>
+
+        <button type="button" class="novo-endereco"><i class="fa fa-plus font-big" aria-hidden="true"></i>Novo Endereço</button>
+        <div class="relacaoKits">   
+          <p> O que deseja enviar para esse endereço? </p>         
+          <div class="kit kit01" data="1"><i class="fa fa-circle-o"></i>Kit 01: Suposta Mãe</div>
+          <div class="kit kit02 ativo" data="2"><i class="fa fa-check-circle"></i>Kit 02: Suposto Filho</div>
+          <div class="kit kit02 ativo" data="2"><i class="fa fa-check-circle"></i>Kit 03: Suposto Pai</div>
+        </div>
+            <div class="form-item " id="">
+            
+              <label for="remetente2">Remetente</label>
+
+              <input id="remetente2" class="form-text hs-input" name="remetente2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+
+            <div class="form-item" id="">
+            
+              <label for="cep2">CEP</label>
+
+              <input id="cep2" class="form-text hs-input" name="cep2" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="rua2">Rua/Av.:</label>
+
+              <input id="rua2" class="form-text hs-input" name="rua2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="numero-complemento2">Número e complemento</label>
+
+              <input id="numero-complemento2" class="form-text hs-input" name="numero-complemento2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="bairro2">Bairro</label>
+
+              <input id="bairro2" class="form-text hs-input" name="bairro2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="cidade2">Cidade</label>
+
+              <input id="cidade2" class="form-text hs-input" name="cidade2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="UF2">UF</label>
+
+              <input id="UF2" class="form-text hs-input" name="UF2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Unidade Federativa">
+              <span class="error1" style="display: none;">
+                  <i class="error-log fa fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <div class="form-item" id="">
+            
+              <label for="telefone2">Telefone</label>
+
+              <input id="telefone2" class="form-text hs-input" name="telefone2" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Insira um telefone">
               <span class="error1" style="display: none;">
                   <i class="error-log fa fa-exclamation-triangle"></i>
               </span>
@@ -122,7 +267,7 @@
 
 
         <input type="button" data-page="2" name="previous" class="previous action-button" value="Anterior" />
-        <input type="button" data-page="2" name="next" class="next action-button" value="Proximo" />
+        <input type="button" data-page="4" name="next" class="next action-button" value="Proximo" />
 
       </fieldset>
 

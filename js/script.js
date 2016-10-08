@@ -129,6 +129,7 @@ $(document).ready(function(){
     var current_fs, next_fs, previous_fs;
     var left, opacity, scale;
     var animating;
+
     $(".next-1").click(function(){
 
         $(".steps").validate({
@@ -143,7 +144,10 @@ $(document).ready(function(){
                     minlength : 6,
                     maxlength : 12,
                     equalTo : "#password"
-                }
+                },
+                telefone1:{
+                    number:true
+                },
         },
         messages: {
                     email : {
@@ -157,6 +161,9 @@ $(document).ready(function(){
                         equalTo: "As senhas são diferentes",
                         minlength:"Por favor entre com no mínimo 6 caracteres",
                         maxlength: "Limite de 12 caracteres",
+                    },
+                    telefone1:{
+                        number:"Por favor insira um número de telefone",
                     },
                 },
         errorPlacement: function(error, element) {
@@ -190,20 +197,33 @@ $(document).ready(function(){
         });
 
     });
+
+    // $("#endereco2").hide();
     $(".novo-endereco").click(function(){
         var endereco1= $("#progressbar").find(".endereco1");
-        if($(".novo-endereco").text() === "Novo Endereço"){
+        if($(".novo-endereco").has(":contains('Novo')").length > 0 ){
             endereco1.text("endereço 1");
             $("#endereco .fs-title").text("Endereço Principal");
             $("<li class='endereco2'>Endereço 2</li>").insertAfter(endereco1);
             $(".novo-endereco").html("Desfazer");
+            // $("#endereco2").show();
+            console.log("clicado novo endereço");
         }
         else{
             $(".endereco2").remove();
             endereco1.text("endereço");
             $("#endereco .fs-title").text("Endereço");
             $(".novo-endereco").html("<i class='fa fa-plus font-big' aria-hidden='true'></i>Novo Endereço");
-            console.log("entrei no desfazer");
+            // $("#endereco2").hide();
+            console.log("bug filho da puta");
+        }
+    });
+
+    $(".kit").click(function(){
+        $(this).addClass("ativo");
+        if($(this).hasClass("ativo")){
+            $(this).children("i").toggleClass("fa-circle-o fa-check-circle") 
+            // $(this).prepend("<i class='fa fa-check-circle'></i>");
         }
     });
     $(".next").click(function() {
@@ -272,7 +292,19 @@ $(document).ready(function(){
         if (animating) return false;
         animating = true;
         current_fs = $(this).parent();
-        next_fs = $(this).parent().next();
+ 
+        // if($(".endereco1.active").length > 0){
+        //     if($('#endereco2').is(":visible") == true){
+        //         next_fs = $(this).parent().next();
+        //         console.log("regular next");
+        //     }  
+        
+        // }
+        // else{
+            next_fs = $(this).parent().nextAll().eq(1);         
+            // console.log("zero based");
+        // }
+
         $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
         next_fs.show();
         current_fs.animate({

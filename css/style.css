@@ -110,7 +110,7 @@ body{
   font-style: italic;
 }
 .comprar{
-	margin-top: 50px;
+  transform: translateY(70px);
 	padding: 10px;
 	width: 225px;
 	text-align: center;
@@ -195,7 +195,7 @@ body{
 }
 
 .personalizado .comprar{
-  margin-top: 15px; 
+    transform: translateY(21px);
 }
 /*::::::::::::::::::::Estilo Envio::::::::::::::::::::*/ 
 .novo-endereco{
@@ -233,7 +233,7 @@ body{
   cursor: pointer;
 }
 
-.kit .fa-check-circle{
+.kit .fa {
   color: #00b22c;
 }
 .font-big{
@@ -737,7 +737,7 @@ display: block;
 @media screen and (min-width:425px) and (max-width:768px){
 
   .comprar {
-      margin-top: 50px;
+
       padding: 10px;
       width: 260px;
   }
