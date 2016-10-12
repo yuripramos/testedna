@@ -4,11 +4,11 @@
     <title>Prototype UI - Teste DNA</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Oswald:400,700|Raleway:400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -78,151 +78,853 @@
           <h2 class="fs-title">Endereço</h2>
           <h3 class="fs-subtitle"><i class="fa fa-info-circle font-big" aria-hidden="true"></i>Você pode optar por receber os kits de coletas em endereços diferentes</h3>
           <button type="button" class="novo-endereco"><i class="fa fa-plus font-big" aria-hidden="true"></i>Novo Endereço</button>
-          <div class="novo-endereco-content">
-            <p> blablabllalllblalblallsalsdlsdlasdldasldsal</p>
-            <p>asdsdasdasdsadasdsadsadsadsadsadsadasdsad </p>
-            <p> asdsadasdasdsadasdsad</p>
-          </div>
-          <div class="controller">
-            
-            <p> O que deseja enviar para esse endereço? </p>
-            <ul>
-              <li>
-                <input type="radio" id="kit01-1" name="kit01">
-                <label for="kit01-1">Kit 01: Suposta Mãe</label>
-                
-                <div class="check"></div>
-              </li>
-              <li>
-                <input type="radio" id="kit02-1" name="kit02">
-                <label for="kit02-1">Kit 02: Suposto Filho</label>
-                
-                <div class="check"><div class="inside"></div></div>
-              </li>    
-              <li>
-                <input type="radio" id="kit03-1" name="kit03">
-                <label for="kit03-1">Kit 03: Suposto Pai</label>
-                <div class="check"><div class="inside"></div></div>
-              </li>
-              <li class="hide">
-                <input type="radio" id="kit04-1" name="kit04">
-                <label for="kit04-1">Kit 04: Suposto Pai</label>
-                <div class="check"><div class="inside"></div></div>
-              </li>
-              <li class="hide">
-                <input type="radio" id="kit05-1" name="kit05">
-                <label for="kit05-1">Kit 05: Suposto Pai</label>
-                <div class="check"><div class="inside"></div></div>
-              </li>
-            </ul>
-          </div>
-          <div class="form-item " id="">
-            <label for="remetente1">Remetente</label>
-            <input id="remetente1" class="form-text hs-input" name="remetente1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
-            <span class="error1" style="display: none;">
-              <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <div class="form-item" id="">
-            
-            <label for="cep1">CEP</label>
-            <input id="cep1" class="form-text hs-input" name="cep1" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
-            <span class="error1" style="display: none;">
-              <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <div class="form-item" id="">
-            
-            <label for="rua1">Rua/Av.:</label>
-            <input id="rua1" class="form-text hs-input" name="rua1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
-            <span class="error1" style="display: none;">
-              <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <div class="form-item" id="">
-            
-            <label for="numero-complemento1">Número e complemento</label>
-            <input id="numero-complemento1" class="form-text hs-input" name="numero-complemento1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
-            <span class="error1" style="display: none;">
-              <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <div class="form-item" id="">
-            
-            <label for="bairro1">Bairro</label>
-            <input id="bairro1" class="form-text hs-input" name="bairro1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
-            <span class="error1" style="display: none;">
-              <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <div class="form-item" id="">
-            
-            <label for="cidade1">Cidade</label>
-            <input id="cidade1" class="form-text hs-input" name="cidade1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
-            <span class="error1" style="display: none;">
-              <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <div class="form-item" id="">
-            
-            <label for="UF1">UF</label>
-            <select name="UF1" id="UF1" required>
-              <option value="AC">Acre</option>
-              <option value="AL">Alagoas</option>
-              <option value="AP">Amapá</option>
-              <option value="AM">Amazonas</option>
-              <option value="BA">Bahia</option>
-              <option value="CE">Ceará</option>
-              <option value="DF">Distrito Federal</option>
-              <option value="ES">Espírito Santo</option>
-              <option value="GO">Goiás</option>
-              <option value="MA">Maranhão</option>
-              <option value="MT">Mato Grosso</option>
-              <option value="MS">Mato Grosso do Sul</option>
-              <option value="MG">Minas Gerais</option>
-              <option value="PA">Pará</option>
-              <option value="PB">Paraíba</option>
-              <option value="PR">Paraná</option>
-              <option value="PE">Pernambuco</option>
-              <option value="PI">Piauí</option>
-              <option value="RJ">Rio de Janeiro</option>
-              <option value="RN">Rio Grande do Norte</option>
-              <option value="RS">Rio Grande do Sul</option>
-              <option value="RO">Rondônia</option>
-              <option value="RR">Roraima</option>
-              <option value="SC">Santa Catarina</option>
-              <option value="SP">São Paulo</option>
-              <option value="SE">Sergipe</option>
-              <option value="TO">Tocantins</option>
-            </select>
-            <span class="error1" style="display: none;">
-              <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <div class="form-item" id="">
-            <label for="telefone1">Telefone</label>
-            <input id="telefone1" class="form-text hs-input" name="telefone1" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um telefone">
-            <span class="error1" style="display: none;">
-              <i class="error-log fa fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <div class="novo-endereco-content" data-endereco="2">
-            <div class="form-item" id="">
-              <label for="bairro2">Bairro</label>
-              <input id="bairro2" class="form-text hs-input" name="bairro2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
-              <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-              </span>
+
+          <div class="panel-group wrap" id="bs-collapse">
+            <div class="panel" data-endereco="1">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                <a data-toggle="collapse" href="#one">
+                  Endereço 1
+                </a>
+                </h4>
+              </div>
+              <div id="one" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="controller row">
+                    <p> O que deseja enviar para esse endereço? </p><i class="material-icons myDelete">delete</i></p> 
+                    <ul>
+                      <li>
+                        <input type="radio" id="kit01-1" name="kit01">
+                        <label for="kit01-1">Kit 01: Suposta Mãe</label>
+                        
+                        <div class="check"></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit02-1" name="kit02">
+                        <label for="kit02-1">Kit 02: Suposto Filho</label>
+                        
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit03-1" name="kit03">
+                        <label for="kit03-1">Kit 03: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit04-1" name="kit04">
+                        <label for="kit04-1">Kit 04: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit05-1" name="kit05">
+                        <label for="kit05-1">Kit 05: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit06-1" name="kit06">
+                        <label for="kit06-1">Kit 06: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="remetente1">Remetente</label>
+                    <input id="remetente1" class="form-text hs-input" name="remetente1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cep1">CEP</label>
+                    <input id="cep1" class="form-text hs-input" name="cep1" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="rua1">Rua/Av.:</label>
+                    <input id="rua1" class="form-text hs-input" name="rua1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="numero-complemento1">Número e complemento</label>
+                    <input id="numero-complemento1" class="form-text hs-input" name="numero-complemento1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="bairro1">Bairro</label>
+                    <input id="bairro1" class="form-text hs-input" name="bairro1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cidade1">Cidade</label>
+                    <input id="cidade1" class="form-text hs-input" name="cidade1" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="UF1">UF</label>
+                    <select name="UF1" id="UF1" required>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="telefone1">Telefone</label>
+                    <input id="telefone1" class="form-text hs-input" name="telefone1" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um telefone">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="form-item" id="">
-              
-              <label for="cidade2">Cidade</label>
-              <input id="cidade2" class="form-text hs-input" name="cidade2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
-              <span class="error1" style="display: none;">
-                <i class="error-log fa fa-exclamation-triangle"></i>
-              </span>
-            </div>           
+            <!-- end of panel -->
+            <div class="panel hidden" data-endereco="2">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                <a data-toggle="collapse" href="#two">
+                  Endereço 2 
+                </a>
+                </h4>
+              </div>
+              <div id="two" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="controller row">
+                    <p> O que deseja enviar para esse endereço? <i class="material-icons myDelete">delete</i></p> 
+                    <ul>
+                      <li>
+                        <input type="radio" id="kit01-2" name="kit01">
+                        <label for="kit01-2">Kit 01: Suposta Mãe</label>
+                        <div class="check"></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit02-2" name="kit02">
+                        <label for="kit02-2">Kit 02: Suposto Filho</label>
+                        
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit03-2" name="kit03">
+                        <label for="kit03-2">Kit 03: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit04-2" name="kit04">
+                        <label for="kit04-2">Kit 04: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit05-2" name="kit05">
+                        <label for="kit05-2">Kit 05: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit06-2" name="kit06">
+                        <label for="kit06-2">Kit 06: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="remetente2">Remetente</label>
+                    <input id="remetente2" class="form-text hs-input" name="remetente2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cep2">CEP</label>
+                    <input id="cep2" class="form-text hs-input" name="cep2" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="rua2">Rua/Av.:</label>
+                    <input id="rua2" class="form-text hs-input" name="rua2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="numero-complemento2">Número e complemento</label>
+                    <input id="numero-complemento2" class="form-text hs-input" name="numero-complemento2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="bairro2">Bairro</label>
+                    <input id="bairro2" class="form-text hs-input" name="bairro2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cidade2">Cidade</label>
+                    <input id="cidade2" class="form-text hs-input" name="cidade2" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="UF2">UF</label>
+                    <select name="UF2" id="UF2" required>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="telefone2">Telefone</label>
+                    <input id="telefone2" class="form-text hs-input" name="telefone2" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um telefone">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of panel -->
+            <div class="panel hidden" data-endereco="3">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                <a data-toggle="collapse"  href="#three">
+                  Endereço 3
+                </a>
+                </h4>
+              </div>
+              <div id="three" class="panel-collapse collapse">
+               <div class="panel-body">
+                  <div class="controller row">
+                    <p> O que deseja enviar para esse endereço? </p><i class="material-icons myDelete">delete</i></p> 
+                    <ul>
+                      <li>
+                        <input type="radio" id="kit01-3" name="kit01">
+                        <label for="kit01-3">Kit 01: Suposta Mãe</label>
+                        
+                        <div class="check"></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit02-3" name="kit02">
+                        <label for="kit02-3">Kit 02: Suposto Filho</label>
+                        
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit03-3" name="kit03">
+                        <label for="kit03-3">Kit 03: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit04-3" name="kit04">
+                        <label for="kit04-3">Kit 04: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit05-3" name="kit05">
+                        <label for="kit05-3">Kit 05: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit06-3" name="kit06">
+                        <label for="kit06-3">Kit 06: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="remetente3">Remetente</label>
+                    <input id="remetente3" class="form-text hs-input" name="remetente3" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cep3">CEP</label>
+                    <input id="cep3" class="form-text hs-input" name="cep3" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="rua3">Rua/Av.:</label>
+                    <input id="rua3" class="form-text hs-input" name="rua3" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="numero-complemento3">Número e complemento</label>
+                    <input id="numero-complemento3" class="form-text hs-input" name="numero-complemento3" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="bairro3">Bairro</label>
+                    <input id="bairro3" class="form-text hs-input" name="bairro3" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cidade3">Cidade</label>
+                    <input id="cidade3" class="form-text hs-input" name="cidade3" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="UF3">UF</label>
+                    <select name="UF3" id="UF3" required>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="telefone3">Telefone</label>
+                    <input id="telefone3" class="form-text hs-input" name="telefone3" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um telefone">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel hidden" data-endereco="4">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                <a data-toggle="collapse"   href="#four">
+                  Endereço 4
+                </a>
+                </h4>
+              </div>
+              <div id="four" class="panel-collapse collapse ">
+                <div class="panel-body">
+                  <div class="controller row">
+                    <p> O que deseja enviar para esse endereço? </p><i class="material-icons myDelete">delete</i></p> 
+                    <ul>
+                      <li>
+                        <input type="radio" id="kit01-4" name="kit01">
+                        <label for="kit01-4">Kit 01: Suposta Mãe</label>
+                        
+                        <div class="check"></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit02-4" name="kit02">
+                        <label for="kit02-4">Kit 02: Suposto Filho</label>
+                        
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit03-4" name="kit03">
+                        <label for="kit03-4">Kit 03: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit04-4" name="kit04">
+                        <label for="kit04-4">Kit 04: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit05-4" name="kit05">
+                        <label for="kit05-4">Kit 05: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit06-4" name="kit06">
+                        <label for="kit06-4">Kit 06: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="remetente4">Remetente</label>
+                    <input id="remetente4" class="form-text hs-input" name="remetente4" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cep4">CEP</label>
+                    <input id="cep4" class="form-text hs-input" name="cep4" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="rua4">Rua/Av.:</label>
+                    <input id="rua4" class="form-text hs-input" name="rua4" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="numero-complemento4">Número e complemento</label>
+                    <input id="numero-complemento4" class="form-text hs-input" name="numero-complemento4" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="bairro4">Bairro</label>
+                    <input id="bairro4" class="form-text hs-input" name="bairro4" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cidade4">Cidade</label>
+                    <input id="cidade4" class="form-text hs-input" name="cidade4" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="UF4">UF</label>
+                    <select name="UF4" id="UF4" required>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="telefone4">Telefone</label>
+                    <input id="telefone4" class="form-text hs-input" name="telefone4" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um telefone">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel hidden" data-endereco="5">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                <a data-toggle="collapse"   href="#five">
+                  Endereço 5
+                </a>
+                </h4>
+              </div>
+              <div id="five" class="panel-collapse collapse ">
+                <div class="panel-body">
+                  <div class="controller row">
+                    <p> O que deseja enviar para esse endereço? </p><i class="material-icons myDelete">delete</i></p> 
+                    <ul>
+                      <li>
+                        <input type="radio" id="kit01-5" name="kit01">
+                        <label for="kit01-5">Kit 01: Suposta Mãe</label>
+                        
+                        <div class="check"></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit02-5" name="kit02">
+                        <label for="kit02-5">Kit 02: Suposto Filho</label>
+                        
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit03-5" name="kit03">
+                        <label for="kit03-5">Kit 03: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit04-5" name="kit04">
+                        <label for="kit04-5">Kit 04: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit05-5" name="kit05">
+                        <label for="kit05-5">Kit 05: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit06-6" name="kit06">
+                        <label for="kit06-6">Kit 06: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="remetente5">Remetente</label>
+                    <input id="remetente5" class="form-text hs-input" name="remetente5" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cep5">CEP</label>
+                    <input id="cep5" class="form-text hs-input" name="cep5" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="rua5">Rua/Av.:</label>
+                    <input id="rua5" class="form-text hs-input" name="rua5" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="numero-complemento5">Número e complemento</label>
+                    <input id="numero-complemento5" class="form-text hs-input" name="numero-complemento5" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="bairro5">Bairro</label>
+                    <input id="bairro5" class="form-text hs-input" name="bairro5" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cidade5">Cidade</label>
+                    <input id="cidade5" class="form-text hs-input" name="cidade5" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="UF5">UF</label>
+                    <select name="UF5" id="UF5" required>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="telefone5">Telefone</label>
+                    <input id="telefone5" class="form-text hs-input" name="telefone5" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um telefone">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel hidden" data-endereco="6">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                <a data-toggle="collapse"   href="#six">
+                  Endereço 6
+                </a>
+                </h4>
+              </div>
+              <div id="four" class="panel-collapse collapse ">
+      <div class="panel-body">
+                  <div class="controller row">
+                    <p> O que deseja enviar para esse endereço? </p><i class="material-icons myDelete">delete</i></p> 
+                    <ul>
+                      <li>
+                        <input type="radio" id="kit01-1" name="kit01">
+                        <label for="kit01-1">Kit 01: Suposta Mãe</label>
+                        
+                        <div class="check"></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit02-6" name="kit02">
+                        <label for="kit02-6">Kit 02: Suposto Filho</label>
+                        
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li>
+                        <input type="radio" id="kit03-6" name="kit03">
+                        <label for="kit03-6">Kit 03: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit04-6" name="kit04">
+                        <label for="kit04-6">Kit 04: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit05-6" name="kit05">
+                        <label for="kit05-6">Kit 05: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                      <li class="hide">
+                        <input type="radio" id="kit06-6" name="kit06">
+                        <label for="kit06-6">Kit 06: Suposto Pai</label>
+                        <div class="check"><div class="inside"></div></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="remetente6">Remetente</label>
+                    <input id="remetente6" class="form-text hs-input" name="remetente6" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Não é aceito valores em branco">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cep6">CEP</label>
+                    <input id="cep6" class="form-text hs-input" name="cep6" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um número válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="rua6">Rua/Av.:</label>
+                    <input id="rua6" class="form-text hs-input" name="rua6" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um endereço válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="numero-complemento6">Número e complemento</label>
+                    <input id="numero-complemento6" class="form-text hs-input" name="numero-complemento6" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um valor válido">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="bairro6">Bairro</label>
+                    <input id="bairro6" class="form-text hs-input" name="bairro6" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um bairro">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="cidade6">Cidade</label>
+                    <input id="cidade6" class="form-text hs-input" name="cidade6" required="required" size="60" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira uma cidade válida">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    
+                    <label for="UF6">UF</label>
+                    <select name="UF6" id="UF6" required>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                  <div class="form-item" id="">
+                    <label for="telefone6">Telefone</label>
+                    <input id="telefone6" class="form-text hs-input" name="telefone6" required="required" size="11" maxlength="128" type="text" value="" placeholder="" data-rule-required="true" data-msg-required="Por favor insira um telefone">
+                    <span class="error1" style="display: none;">
+                      <i class="error-log fa fa-exclamation-triangle"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of panel -->
           </div>
+          <!-- end of #bs-collapse  -->
+          
           <input type="button" data-page="1" name="previous" class="previous action-button" value="Anterior" />
           <input type="button" data-page="3" name="next" class="next action-button next-2" value="Proximo" />
         </fieldset>
@@ -246,14 +948,14 @@
               <i class="error-log fa fa-exclamation-triangle"></i>
             </span>
           </div>
-           <div class="form-item" id="">
+          <div class="form-item" id="">
             <label for="numero">Número</label>
             <input id="numero" class="form-text hs-input" name="" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
             <span class="error1" style="display: none;">
               <i class="error-log fa fa-exclamation-triangle"></i>
             </span>
           </div>
-           <div class="form-item" id="">
+          <div class="form-item" id="">
             <label for="cccredito">CC </label>
             <input id="cccredito" class="form-text hs-input" name="" required="required" size="60" maxlength="128" type="number" value="" placeholder="" data-rule-required="true" data-msg-required="Please enter a valid number">
             <span class="error1" style="display: none;">
@@ -267,6 +969,7 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" ></script>
+  <!-- When up to dev and production has to delete this script -->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

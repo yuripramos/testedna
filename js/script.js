@@ -5,7 +5,7 @@
      */
 
 
-    $(document).ready(function() {
+    $(document).ready(function($) {
 
         $("#n-pais").bind('keyup mouseup', function() {
             var tamFilho = document.getElementById("n-filhos");
@@ -275,14 +275,14 @@
                     telefone1: {
                         number: true
                     },
-                    telefone2:{
+                    telefone2: {
                         number: true
                     },
-                    cep1:{
-                        maxlength:8
+                    cep1: {
+                        maxlength: 8
                     },
-                    cep2:{
-                        maxlength:8
+                    cep2: {
+                        maxlength: 8
                     }
                 },
                 messages: {
@@ -301,16 +301,16 @@
                     telefone1: {
                         number: "Por favor insira um número de telefone",
                     },
-                    cep1:{
-                        number:"Por favor insira um número válido",
-                        maxlength:"Limite de 8 caracteres",
+                    cep1: {
+                        number: "Por favor insira um número válido",
+                        maxlength: "Limite de 8 caracteres",
                     },
-                    cep2:{
-                        number:"Por favor insira um número válido",
-                        maxlength:"Limite de 8 caracteres",
+                    cep2: {
+                        number: "Por favor insira um número válido",
+                        maxlength: "Limite de 8 caracteres",
                     },
-                    telefone2:{
-                        maxlength:"Por favor insira um número de telefone",
+                    telefone2: {
+                        maxlength: "Por favor insira um número de telefone",
                     },
                 },
                 errorPlacement: function(error, element) {
@@ -344,32 +344,55 @@
             });
 
         });
+        $('.collapse.in').prev('.panel-heading').addClass('active');
+        $('#bs-collapse')
+            .on('show.bs.collapse', function(a) {
+                $(a.target).prev('.panel-heading').addClass('active');
+            })
+            .on('hide.bs.collapse', function(a) {
+                $(a.target).prev('.panel-heading').removeClass('active');
+            });
 
+        // $(".novo-endereco").click(function() {
+        //     var endereco1 = $("#progressbar").find(".endereco1");
+        //     if ($(".novo-endereco").text() == "Novo Endereço") {
+        //         endereco1.text("endereço 1");
+        //         $("#endereco .fs-title").text("Endereço Principal");
+        //         // $("<li class='endereco2'>Endereço 2</li>").insertAfter(endereco1);
+        //         // $(fieldsetEndereco2).insertAfter("#endereco");
+        //         $(".novo-endereco").html("Desfazer");
+        //         // previous_fs = $("#endereco");
+        //         // next_fs = $("#pagamento");
+        //     } else {
+        //         // $(".endereco2").remove();
+        //         // $("#endereco2").remove();
+        //         endereco1.text("endereço");
+        //         $("#endereco .fs-title").text("Endereço");
+        //         // $(".novo-endereco").html("<i class='fa fa-plus font-big' aria-hidden='true'></i>Novo Endereço");
+        //         // $("#endereco2").hide();
 
-        $(".novo-endereco").click(function() {
-            var endereco1 = $("#progressbar").find(".endereco1");
-            if ($(".novo-endereco").text() == "Novo Endereço") {
-                endereco1.text("endereço 1");
-                $("#endereco .fs-title").text("Endereço Principal");
-                $("<li class='endereco2'>Endereço 2</li>").insertAfter(endereco1);
-                $(fieldsetEndereco2).insertAfter("#endereco");
-                $(".novo-endereco").html("Desfazer");
-                previous_fs = $("#endereco");
-                next_fs = $("#pagamento");
-            } else {
-                $(".endereco2").remove();
-                $("#endereco2").remove();
-                endereco1.text("endereço");
-                $("#endereco .fs-title").text("Endereço");
-                $(".novo-endereco").html("<i class='fa fa-plus font-big' aria-hidden='true'></i>Novo Endereço");
-                // $("#endereco2").hide();
-
-            }
+        //     }
+        // });
+        var k = 1;
+        $(document).on("click", ".myDelete", function() {
+            $(this).parents(".panel").addClass("hidden");
+            k--;
         });
-        $(document).on ("click", ".novo-endereco", function() {
-            $(this).addClass("ativo");
-            if ($(this).hasClass("ativo")) {
-                $(this).children("i").toggleClass("fa-circle-o fa-check-circle")
+
+        $(document).on("click", ".novo-endereco", function() {
+            if ($(".panel[data-endereco=" + k + "]").is(":visible")) {
+                if ($("#remetente" + k + "").val() == "" || $("#cep" + k + "").val() == "" || $("#bairro" + k + "").val() == "" || $("#cidade" + k + "").val() == "" || $("#telefone" + k + "").val() == "") {
+                    alert("Antes de adicionar outro endereco preencha o endereço vazio");
+                    return;
+                }
+            }
+
+            if ($(".panel[data-endereco=" + k + "]").next().not(":visible").length > 0) {
+                $(".panel[data-endereco=" + k + "]").next().removeClass("hidden").addClass("show");
+                k++;
+            }
+            if (k > 6) {
+                k = 1;
             }
         });
         $(document).on("click", ".next", function() {

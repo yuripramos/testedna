@@ -232,9 +232,10 @@ body{
   padding-right: 10px;
 }
 .steps {
-    width: 675px;
+  width: 800px;
   margin: 50px auto;
   position: relative;
+  min-height: 700px;
 }
 
 .steps fieldset {
@@ -469,42 +470,44 @@ display: block;
 #pagamento .confirma-compra{
   width: 200px;
 }
-.novo-endereco-content{
-  display: none;
-}
+// .novo-endereco-content{
+//   display: none;
+// }
 
-.controller ul{
+.panel-body .controller ul{
   list-style: none;
   height: 100%;
   width: 100%;
-  margin: 0;
+  // margin-left: 30px;
   padding: 0;
   text-align: center;
+  display: inline-block;
 }
-.controller ul > .hide {
+.panel-body .controller ul > .hide {
   display: none;
 }
-.controller  p{
+.panel-body .controller  p{
   margin-top: 15px;
   text-align: center;
 }
 
-.controller ul li{
+.panel-body .controller ul li{
   color: #837E7E;
-  display: inline-block;
   position: relative;
+  max-width: 200px;
+  float: left;
 }
 
-.controller ul li input[type=radio]{
+.panel-body .controller ul li input[type=radio]{
   position: absolute;
   visibility: hidden;
 }
 
-.controller ul li label{
+.panel-body .controller ul li label{
   display: block;
   position: relative;
   font-weight: 300;
-  font-size: 1.35em;
+  font-size: 1em;
   padding: 25px 5px 25px 60px;
   margin: 10px auto;
   height: 30px;
@@ -513,35 +516,37 @@ display: block;
   -webkit-transition: all 0.25s linear;
 }
 
-.controller ul li:hover label{
+.panel-body .controller ul li:hover label{
   color: #ccc;
 }
 
-.controller ul li .check{
+.panel-body .controller ul li .check{
+  top: 30px;
   display: block;
   position: absolute;
   border: 3px solid #837E7E;
   border-radius: 100%;
-  height: 30px;
-  width: 30px;
-  top: 30px;
+  height: 25px;
+  width: 25px;
   left: 20px;
   z-index: 5;
   transition: border .25s linear;
   -webkit-transition: border .25s linear;
 }
-
-.controller ul li:hover .check {
+.panel-body .controller ul li .check .inside{
+  width: 15px;
+  height: 15px;
+}
+.panel-body .controller ul li:hover .check {
   border: 3px solid #FFFFFF;
 }
-
-.controller ul li .check::before {
+.panel-body .controller ul li .check::before {
   display: block;
   position: absolute;
   content: '';
   border-radius: 100%;
-  height: 15px;
-  width: 15px;
+    height: 10px;
+    width: 10px;
   top: 5px;
   left: 5px;
   margin: auto;
@@ -549,20 +554,136 @@ display: block;
   -webkit-transition: background 0.25s linear;
 }
 
-.controller input[type=radio]:checked ~ .check {
+.panel-body .controller input[type=radio]:checked ~ .check {
   border: 3px solid #00b22c;
 }
 
-.controller input[type=radio]:checked ~ .check::before{
+.panel-body .controller input[type=radio]:checked ~ .check::before{
   background:#00b22c;
 }
 
-.controller input[type=radio]:checked ~ label{
+.panel-body .controller input[type=radio]:checked ~ label{
   color: #00b22c;
 }
+/*::::::::::::::::::::Estilo Envio - Accordion Multiplos enderecos ::::::::::::::::::::*/ 
+.wrap {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+a:focus,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: none;
+}
+
+.panel {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #fff;
+  background: none;
+  box-shadow: none;
+}
+
+.panel:last-child {
+  border-bottom: none;
+}
+
+.panel-group > .panel:first-child .panel-heading {
+  border-radius: 1px 1px 0 0;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-heading {
+  background-color: #009688;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  padding: 0;
+}
+
+.panel-title a {
+  display: block;
+  color: #fff;
+  padding: 15px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.panel-body {
+  background: #fff;
+}
+
+.panel:last-child .panel-body {
+  border-radius: 0 0 4px 4px;
+}
+
+.panel:last-child .panel-heading {
+  border-radius: 0 0 1px 1px;
+  transition: border-radius 0.3s linear 0.2s;
+}
+
+.panel:last-child .panel-heading.active {
+  border-radius: 0;
+  transition: border-radius linear 0s;
+}
+/* #bs-collapse icon scale option */
 
 
+.panel-heading a:before {
+  content: '\e146';
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  font-size: 24px;
+  transition: all 0.5s;
+  transform: scale(1);
+}
 
+.panel-heading.active a:before {
+  content: ' ';
+  transition: all 0.5s;
+  transform: scale(0);
+}
+
+#bs-collapse .panel-heading a:after {
+  content: ' ';
+  font-size: 24px;
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+#bs-collapse .panel-heading.active a:after {
+  content: '\e909';
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.myDelete{
+  transform: translate(4px,-30px);
+  color: #000;
+  font-size: 40px;
+  float: right;
+  cursor: pointer;
+}
+
+.myDelete:hover{
+  color:red;
+}
 /* RESPONSIVE */
 
 /* moves error logs in tablet/smaller screens */
