@@ -222,8 +222,6 @@ body{
   font-size: 20px;
 }
 
-
-
 .kit .fa {
   color: #00b22c;
 }
@@ -235,7 +233,7 @@ body{
   width: 800px;
   margin: 50px auto;
   position: relative;
-  min-height: 700px;
+  min-height: 785px;
 }
 
 .steps fieldset {
